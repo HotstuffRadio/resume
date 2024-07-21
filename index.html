@@ -18,6 +18,16 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        .clock-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #clock {
+            font-size: 24px;
+            font-weight: bold;
+            color: gold; /* Gold color for the clock */
         }
         header, section, a {
             transition: background-color 0.3s ease;
@@ -69,6 +79,11 @@
             <h1>Johnny Pavlatos</h1>
             <p>Copy & Web Developer</p>
         </header>
+        
+        <div class="clock-container">
+            <div id="clock"></div>
+        </div>
+
         <section>
             <h2>About Me</h2>
             <p>I am a passionate copy writer & web developer with experience in creating muti media designs, front-end development & visual aesthetics. I love creating responsive, unique and user-friendly concepts for social media, advertising, marketing & websites.</p>
@@ -91,7 +106,7 @@
                 <li>Content Creation for SoundArt Radio | UK </li>
                 <li>Content Creation & Podcast Production for Istorima | Gr </li>
                 <li>Content Creation for English Language Speaking Book | AUST </li>
-                <li>Operations+Quality CS | LanguageCert | PeopleCert | GR
+                <li>Operations+Quality CS | LanguageCert | PeopleCert | GR</li>
                 <li>Freelance OCR A.I Annotations project | Meta | RWS Group | Lith | USA</li>
                 <li>Freelance Podcast Producer and Post Production | Istorima | GR</li>
                 <li>Freelance Content Production for Radio | NTS Radio | UK</li>
@@ -118,5 +133,20 @@
             <p>Check out my creative credentials: <a href="https://avelospace.net/johnny-pavlatos/" target="_blank">Hot$tuff</a></p>
         </section>
     </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const clock = document.getElementById('clock');
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000); // Update the clock every second
+
+        // Initial call to set the clock right away
+        updateClock();
+    </script>
 </body>
 </html>
