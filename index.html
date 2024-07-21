@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,8 +35,118 @@
         header:hover {
             background-color: #FF76CE; /* Pink */
         }
-        section:hover {
-            background-color: #FFD8A3; /* Default Peach for sections */
+        section:nth-child(2):hover {
+            background-color: #FDFFC2; /* Pale Yellow */
         }
-        section.about:hover {
-            background-color: #FDFFC2;
+        section:nth-child(3):hover {
+            background-color: #FFD8A3; /* Peach */
+        }
+        section:nth-child(4):hover {
+            background-color: #D8FFB0; /* Light Green */
+        }
+        section:nth-child(5):hover {
+            background-color: #FFAA5A; /* Orange */
+        }
+        a:hover {
+            background-color: #FF8C42; /* Dark Orange */
+            color: #ffffff; /* White */
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Johnny Pavlatos</h1>
+            <p>Copy & Web Developer</p>
+        </header>
+        
+        <div class="clock-container">
+            <div id="clock"></div>
+        </div>
+
+        <section>
+            <h2>About Me</h2>
+            <p>I am a passionate copy writer & web developer with experience in creating multi media designs, front-end visual concepts rooted in quirky aesthetics. I love creating responsive, unique and user-friendly concepts for social media, advertising, marketing & websites.</p>
+        </section>
+        <section>
+            <h2>Education</h2>
+            <ul>
+                <li>Masters Degree in Public Arts - University of RMIT Melbourne Australia</li>
+                <li>Bachelor's Degree in Sonic Arts - University of Middlesex London UK</li>
+                <li>Bachelor's Degree in English & Drama - University of Deakin Melbourne Australia</li>
+                <li>Web Development Bootcamp / Dr Angela Lu - HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 & DApps</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <ul>
+                <li>Front-end Developer at Avelospace| GR </li>
+                <li>Copy Editing at Avelospace | GR </li>
+                <li>Internship at Toots Copy & Web Solutions | UK </li>
+                <li>Content Creation for SoundArt Radio | UK </li>
+                <li>Content Creation & Podcast Production for Istorima | Gr </li>
+                <li>Content Creation | Speak Speak Speak ESL Language Book | AUST </li>
+                <li>Operations+Quality CS | LanguageCert | PeopleCert | GR</li>
+                <li>Freelance OCR A.I Annotations project | Meta | RWS Group | Lith | USA</li>
+                <li>Freelance Podcast Producer and Post Production | Istorima | GR</li>
+                <li>Freelance Content Production for Radio | NTS Radio | UK</li>
+                <li>Freelance Content Production for Radio | Resonance FM | UK</li>
+                <li>Research & Project Producer | Urban Nation | GER</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript, Responsive Design, Bootstrap</li>
+                <li>Node, React, PostgreSQL, Web3, DApps</li>
+                <li>SEO Marketing, Brand Building, Smart Content Marketing, Storytelling</li>
+                <li>Adobe Suite, Trello, Jasper, CopySmith, Github</li>
+                <li>Critical Thinking, Design Aesthetics, Research Ethics, Teamwork</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:johnnypavlatos@gmail.com">johnnypavlatos@gmail.com</a></p>
+            <p>Phone: <a href="tel:+036995419741">+03 6995419741</a></p>
+            <p>Website: <a href="https://avelospace.net/" target="_blank">Avelospace</a></p>
+            <p>My Book: <a href="https://hotstuffradio.github.io/speakspeakspeak/#buy" target="_blank">speakspeakspeak</a></p>
+            <p>Check out my creative credentials: <a href="https://avelospace.net/johnny-pavlatos/" target="_blank">Hot$tuff</a></p>
+        </section>
+    </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const clock = document.getElementById('clock');
+            clock.textContent = ${hours}:${minutes}:${seconds};
+        }
+
+        setInterval(updateClock, 1000); // Update the clock every second
+
+        // Initial call to set the clock right away
+        updateClock();
+    </script>
+</body>
+</html>
