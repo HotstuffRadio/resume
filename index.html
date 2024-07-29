@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@
         #clock {
             font-size: 24px;
             font-weight: bold;
-            color: black; /* Gold color for the clock */
+            color: black; /* Black color for the clock */
         }
         header, section, a {
             transition: background-color 0.3s ease;
@@ -35,17 +35,20 @@
         header:hover {
             background-color: #FF76CE; /* Pink */
         }
-        section:nth-child(2):hover {
+        section:nth-of-type(1):hover {
             background-color: #FDFFC2; /* Pale Yellow */
         }
-        section:nth-child(3):hover {
+        section:nth-of-type(2):hover {
             background-color: #FFD8A3; /* Peach */
         }
-        section:nth-child(4):hover {
+        section:nth-of-type(3):hover {
             background-color: #D8FFB0; /* Light Green */
         }
-        section:nth-child(5):hover {
+        section:nth-of-type(4):hover {
             background-color: #FFAA5A; /* Orange */
+        }
+        section:nth-of-type(5):hover {
+            background-color: #FFC0CB; /* Light Pink */
         }
         a:hover {
             background-color: #FF8C42; /* Dark Orange */
@@ -77,7 +80,7 @@
     <div class="container">
         <header>
             <h1>Johnny Pavlatos</h1>
-            <p>Art & Tech  Developer</p>
+            <p>Art & Tech Developer</p>
         </header>
         
         <div class="clock-container">
@@ -113,7 +116,6 @@
                 <li>Freelance Content Production for Radio | NTS Radio | UK</li>
                 <li>Freelance Content Production for Radio | Resonance FM | UK</li>
                 <li>Technical & Project Producer | Urban Nation | GER</li>
-
             </ul>
         </section>
         <section>
@@ -142,7 +144,7 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             const seconds = String(now.getSeconds()).padStart(2, '0');
             const clock = document.getElementById('clock');
-            clock.textContent = ${hours}:${minutes}:${seconds};
+            clock.textContent = `${hours}:${minutes}:${seconds}`;
         }
 
         setInterval(updateClock, 1000); // Update the clock every second
